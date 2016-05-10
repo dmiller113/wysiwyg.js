@@ -1,7 +1,7 @@
 {
   "name": "wysiwyg.js",
-  "version": "1.0.0",
-  "description": "wysiwyg contenteditable editor (lightweight + cross browser)",
+  "version": "1.0.1",
+  "description": "wysiwyg contenteditable editor (lightweight + cross browser) modified for internal use.",
   "homepage": "http://wysiwygjs.github.io/",
   "keywords": [
     "wysiwyg",
@@ -15,10 +15,10 @@
   "files": ["src/"],
   "repository": {
     "type": "git",
-    "url": "https://github.com/wysiwygjs/wysiwyg.js.git"
+    "url": "https://github.com/dmiller113/wysiwyg.js.git"
   },
   "bugs": {
-    "url": "https://github.com/wysiwygjs/wysiwyg.js/issues"
+    "url": "https://github.com/dmiller113/wysiwyg.js/issues"
   },
   "license": "Apache-2.0",
   "devDependencies": {
