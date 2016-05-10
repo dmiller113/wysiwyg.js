@@ -727,7 +727,7 @@
                     {
                         // query read-only
                         if( readonly === undefined )
-                            return node_textarea.hasAttribute ? node_textarea.hasAttribute('readonly') : 
+                            return node_textarea.hasAttribute ? node_textarea.hasAttribute('readonly') :
                                                                 !!node_textarea.getAttribute('readonly'); // IE7
                         // set read-only
                         if( readonly )
@@ -807,9 +807,12 @@
             syncTextarea = function()
             {
                 var new_html = node_wysiwyg.innerHTML;
+
                 if( new_html == previous_html )
                     return ;
                 // HTML changed
+                // We need to have actual >/< weee.
+                new_html = new_html.replace("&gt;", ">").replace("&lt;", "<")
                 node_textarea.value = new_html;
                 previous_html = new_html;
                 // Event Handler
@@ -1204,7 +1207,7 @@
             node_wysiwyg.focus();
             if( ! selectionInside(node_wysiwyg, force_selection) ) // returns 'selection inside editor'
                 return false;
-            
+
             // for webkit, mozilla, opera
             if( window.getSelection )
             {
@@ -1302,7 +1305,7 @@
             {
                 // query read-only
                 if( readonly === undefined )
-                    return node_wysiwyg.hasAttribute ? !node_wysiwyg.hasAttribute('contentEditable') : 
+                    return node_wysiwyg.hasAttribute ? !node_wysiwyg.hasAttribute('contentEditable') :
                                                        !node_wysiwyg.getAttribute('contentEditable'); // IE7
                 // set read-only
                 if( readonly )
